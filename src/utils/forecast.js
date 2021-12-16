@@ -12,7 +12,14 @@ const forecast = (latitude, longitude, callback) => {
         undefined,
         `It is currently ${body.current.weather_descriptions[0].toLowerCase()} outside. The temperature is ${
           body.current.temperature
-        } degrees but it feels like ${body.current.feelslike} degrees.`
+        } degrees but it feels like ${
+          body.current.feelslike
+        } degrees. Wind speed: ${body.current.wind_speed}. Pressure: ${
+          body.current.pressure
+        }. Precipitation: ${body.current.precip}. Humidity: ${
+          body.current.humidity
+        }
+        `
       );
     }
   });
